@@ -2,14 +2,13 @@ import { MCPServer, text, object, widget } from "mcp-use/server";
 import { z } from "zod";
 import { exec } from "child_process";
 
-const port = process.env.PORT ? parseInt(process.env.PORT) : 5000;
+const port = process.env.PORT ? parseInt(process.env.PORT) : 3000;
 
 const server = new MCPServer({
   name: "music-player-mcp",
   title: "Music Player",
   version: "3.0.0",
   description: "Search and play full songs inline with a beautiful audio player widget.",
-  host: process.env.HOST ?? "0.0.0.0",
   baseUrl: process.env.MCP_URL || `http://localhost:${port}`,
 });
 
